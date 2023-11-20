@@ -16,6 +16,7 @@ require (
 	github.com/opencontainers/image-spec v1.0.2
 	github.com/peterhellberg/link v1.2.0
 	github.com/quay/clair/v3 v3.0.0-pre1
+	github.com/samber/lo v1.38.1
 	github.com/sirupsen/logrus v1.9.0
 	google.golang.org/grpc v1.53.0
 )
@@ -44,6 +45,7 @@ require (
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
 	golang.org/x/crypto v0.6.0 // indirect
+	golang.org/x/exp v0.0.0-20220303212507-bbda1eaf7a17 // indirect
 	golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4 // indirect
 	golang.org/x/net v0.6.0 // indirect
 	golang.org/x/sys v0.5.0 // indirect

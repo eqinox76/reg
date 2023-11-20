@@ -5,12 +5,13 @@ import (
 	"context"
 	"encoding/json"
 	"errors"
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/manifest/ocischema"
-	ociv1 "github.com/opencontainers/image-spec/specs-go/v1"
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/distribution/distribution/v3"
+	"github.com/distribution/distribution/v3/manifest/ocischema"
+	ociv1 "github.com/opencontainers/image-spec/specs-go/v1"
 
 	"github.com/distribution/distribution/v3/manifest/manifestlist"
 	"github.com/distribution/distribution/v3/manifest/schema1"

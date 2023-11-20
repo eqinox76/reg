@@ -4,6 +4,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"io"
 	"io/ioutil"
 	"os"
 
@@ -56,7 +57,7 @@ func (cmd *layerCommand) Run(ctx context.Context, args []string) error {
 	}
 	defer layer.Close()
 
-	b, err := ioutil.ReadAll(layer)
+	b, err := io.ReadAll(layer)
 	if err != nil {
 		return err
 	}

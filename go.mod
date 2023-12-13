@@ -1,6 +1,6 @@
 module github.com/genuinetools/reg
 
-go 1.19
+go 1.21
 
 require (
 	github.com/distribution/distribution/v3 v3.0.0-20230131081513-cf87e8d07e8d

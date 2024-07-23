@@ -4,6 +4,7 @@ import (
 	"context"
 	"flag"
 	"fmt"
+	"log"
 	"os"
 	"slices"
 	"sort"
@@ -72,7 +73,11 @@ func (cmd *tagsCommand) Run(ctx context.Context, args []string) error {
 		}
 		entries := []entry{}
 		for _, tag := range tags {
-			m := lo.Must(r.ManifestV2(ctx, image.Path, tag))
+			m, err := r.ManifestV2(ctx, image.Path, tag)
+			if err != nil {
+				log.Printf("could not fetch manifest for tag '%s': %s", tag, err)
+				continue
+			}
 			created, _, _ := lo.Must3(r.TagCreatedDate(ctx, image.Path, tag))
 			c := ""
 			if created != nil {
